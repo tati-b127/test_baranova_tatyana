@@ -1,20 +1,132 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/WorkSans-ExtraLight.ttf") format("ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/WorkSans-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+	font-family: "Work Sans";
+	src: url("/fonts/WorkSans-Regular.ttf") format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/WorkSans-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("/fonts/PTSans-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*:focus-visible,
+*:focus-within {
+  outline: none;
+}
+
 body {
+	font-family: 'Work Sans', sans-serif;
 	max-width: 800px;
 	min-width: 320px;
 	margin: 0 auto;
-	padding: 60px 68px;
-	background-color: #F4F5FC;
 }
 .container {
 	display: flex;
+	padding: 60px 68px;
+	background-color: #F4F5FC;
 }
 .aside {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 49px;
 	background: #5A61ED;
-	color: #FFFFFF;
+	padding: 22px;
 }
-h1 {
-	writing-mode: vertical-lr;
-	text-orientation: upright;
+.aside__title {
+	width: 100%;
+	color: #FFF;
+	font-size: 49px;
+	font-weight: 400;
+	font-family: 'PT Sans', sans-serif;;
+	letter-spacing: 0.5px;
+	margin: 0;
+	transform: rotate(-90deg);
+	/* writing-mode: vertical-lr; */
+	/* text-orientation: upright; */
+}
+.main {
+	padding: 38px 22px;
+background-color: #fff;
+}
+.main__title {
+	font-family: 'Work Sans', sans-serif;
+	color: #111;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 26px;
+	margin: 0;
+}
+.main__description {
+	font-family: 'Work Sans', sans-serif;
+
+	color: #111;
+font-size: 14px;
+font-weight: 300;
+margin: 0;
+margin-bottom: 20px;
+}
+.form {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.form__label {
+	width: 50%;
+	color: #7C7C7C;
+	font-family: 'Work Sans', sans-serif;
+font-size: 12px;
+font-weight: 300;
+margin-bottom: 16px;
+}
+.form__input {
+	width: 100%;
+	color: #111;
+	font-family: 'Work Sans', sans-serif;
+font-size: 14px;
+border: 1px solid transparent;
+border-bottom: 1px solid #F2F2F2;
+outline: none;
+padding: 7px 2px;
+}
+.form__input_radio {
+	width: auto;
+	border-color: #111;
+}
+.form__label_radio {
+	color: #111;
+font-size: 14px;
+}
+.form__input:focus-visible {
+	border-bottom: 1px solid #5A61ED;
+}
+.form__input:nth-child(2n) {
+	margin-right: 20px;
+}
+.form__btn {
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 400;
+
 }

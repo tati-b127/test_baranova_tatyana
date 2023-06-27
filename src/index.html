@@ -16,7 +16,7 @@
 		</div>
 		<div class="main">
 			<h2 class="main__title">New user?</h2>
-			<p class="main__description">Use the form below t</p>
+			<p class="main__description">Use the form below to create your account.</p>
 			<form action="" method="post" class="main__form form">
 				<label for="first-name" class="form__label">
 					First Name
@@ -41,19 +41,35 @@
 				</label>
 				<label class="form__label">
 					Date of Birth
-					<input type="datetime" name="day" class="form__input" id="day">
-					<input type="datetime" name="month" class="form__input" id="month">
-					<input type="datetime" name="year" class="form__input" id="year">
+					<input type="date" name="day" class="form__input" id="day">
+					<!-- <input type="date" name="month" class="form__input" id="month">
+					<input type="date" name="year" class="form__input" id="year"> -->
 				</label>
 				<label for="gender" class="form__label">
-					<input type="radio" name="male" id="male">
-					<input type="radio" name="female" id="female">
+					Gender
+					<div class="form__block">
+						<label class="form__label form__label_radio" for="male">
+							<input type="radio" class="form__input form__input_radio" name="male" id="male">
+							<span class="form__span"></span>
+							Male
+						</label>
+						<label class="form__label form__label_radio" for="female">
+							<input type="radio" class="form__input form__input_radio" name="female" id="female">
+							<span class="form__span"></span>
+							Female
+						</label>
+					</div>
 				</label>
 				<label for="password" class="form__label">
-					<input type="password" name="password" id="password">
+					Password
+					<input type="password" class="form__input" name="password" id="password">
+				</label>
+				<label for="confirmpassword" class="form__label">
+					Confirm Password
+					<input type="password" class="form__input" name="confirmpassword" id="confirmpassword">
 				</label>
 
-				<button type="submit">Complete Signup</button>
+				<button type="submit" class="form__btn">Complete Signup</button>
 			</form>
 		</div>
 	</div>
