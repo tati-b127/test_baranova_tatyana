@@ -1,0 +1,30 @@
+{
+  "name": "test_baranova_tatyana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tati-b127/test_baranova_tatyana.git"
+  },
+  "author": "tati-b127",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tati-b127/test_baranova_tatyana/issues"
+  },
+  "homepage": "https://github.com/tati-b127/test_baranova_tatyana#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}

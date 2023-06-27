@@ -1,0 +1,20 @@
+body {
+	max-width: 800px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 60px 68px;
+	background-color: #F4F5FC;
+}
+.container {
+	display: flex;
+}
+.aside {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 49px;
+	background: #5A61ED;
+	color: #FFFFFF;
+}
+h1 {
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+}

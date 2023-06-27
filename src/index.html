@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test Baranova Tatyana</title>
+	<link href="main.css" rel="stylesheet">
+	<script src="app.js" defer></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="aside">
+			<h1 class="aside__title">Sign up</h1>
+		</div>
+		<div class="main">
+			<h2 class="main__title">New user?</h2>
+			<p class="main__description">Use the form below t</p>
+			<form action="" method="post" class="main__form form">
+				<label for="first-name" class="form__label">
+					First Name
+					<input type="text" name="first-name" class="form__input" id="fname">
+				</label>
+				<label for="last-name" class="form__label">
+					Last Name
+					<input type="text" name="last-name" class="form__input" id="lname">
+				</label>
+				<label for="nation" class="form__label">
+					Nationality
+					<select name="nation" id="nation">
+						<option value="American">American</option>
+						<option value="Italian">Italian</option>
+						<option value="Canadian">Canadian</option>
+						<option value="French">French</option>
+					</select>
+				</label>
+				<label for="e-mail" class="form__label">
+					E-mail
+					<input type="email" name="e-mail" class="form__input" id="mail">
+				</label>
+				<label class="form__label">
+					Date of Birth
+					<input type="datetime" name="day" class="form__input" id="day">
+					<input type="datetime" name="month" class="form__input" id="month">
+					<input type="datetime" name="year" class="form__input" id="year">
+				</label>
+				<label for="gender" class="form__label">
+					<input type="radio" name="male" id="male">
+					<input type="radio" name="female" id="female">
+				</label>
+				<label for="password" class="form__label">
+					<input type="password" name="password" id="password">
+				</label>
+
+				<button type="submit">Complete Signup</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
