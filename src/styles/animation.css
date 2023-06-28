@@ -1,0 +1,27 @@
+.form__block:nth-child(2n):not(.form__block_radio) {
+	animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: inherit;
+	transition-property: transform, -webkit-transform;
+
+}
+.form__label:nth-child(1n):not(.form__label_radio) {
+	animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: inherit;
+
+}
+
+@keyframes slidein {
+  from {
+		opacity: 0;
+    transform: translateY(20px);
+    width: 100%;
+  }
+
+  to {
+		opacity: 1;
+		transform: translateY(0);
+    width: 100%;
+  }
+}

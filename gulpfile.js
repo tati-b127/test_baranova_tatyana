@@ -119,6 +119,8 @@ watch("src/img/**/*.png", images);
 watch("src/img/**/*.jpg", images);
 watch("src/img/**/*.svg", images);
 
+exports.css = styles;
+
 exports.default = series(
 	clean,
 	parallel(html, fonts, images),
