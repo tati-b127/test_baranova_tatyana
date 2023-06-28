@@ -1,27 +1,40 @@
-.form__block:nth-child(2n):not(.form__block_radio) {
+.form .form__block:nth-child(1n):not(.form__block_radio) {
 	animation-duration: 1s;
   animation-name: slidein;
   animation-iteration-count: inherit;
-	transition-property: transform, -webkit-transform;
-
+	transition-property: transform, opacity;
+	transition-timing-function: ease-in-out;
 }
-.form__label:nth-child(1n):not(.form__label_radio) {
-	animation-duration: 2s;
+.form .form__label:nth-child(1n):not(.form__label_radio) {
+	animation-duration: 1s;
+	/* animation-delay: 1s; */
   animation-name: slidein;
   animation-iteration-count: inherit;
-
+	transition-property: transform, opacity;
+	transition-timing-function: ease-in-out;
+}
+.form__btn_animation {
+	animation: .3s shaking ease-in-out;
+	/* animation-duration: .3s;
+  animation-name: shaking;
+  animation-iteration-count: 2; */
 }
 
 @keyframes slidein {
   from {
 		opacity: 0;
-    transform: translateY(20px);
-    width: 100%;
+    transform: translateY(30px);
   }
 
   to {
 		opacity: 1;
 		transform: translateY(0);
-    width: 100%;
   }
+}
+@keyframes shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }

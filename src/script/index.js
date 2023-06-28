@@ -16,10 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const months = [...Array(12).keys()].map((key) =>
 		new Date(0, key).toLocaleString("en", { month: "long" })
 	);
-	// console.log(months);
 	for (let i = 0; i < months.length; i++) {
 		const optionMonth = document.createElement("option");
-		// console.log(months[i]);
 		optionMonth.value = months[i];
 		optionMonth.innerHTML = months[i];
 		selectMonth.appendChild(optionMonth);
@@ -29,12 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	const daysOfMonth = 31;
 	for (let day = 1; day <= daysOfMonth; day++) {
 		const optionDay = document.createElement("option");
-		// console.log(day);
 		optionDay.value = day;
 		optionDay.innerHTML = day;
 		selectDay.appendChild(optionDay);
 	}
 	// Send form
-	const form = document.getElementById("form");
-	form.addEventListener("submit", () => {});
+	const formBtn = document.querySelector(".form__btn");
+	formBtn.addEventListener("click", function () {
+		const errors = document.querySelectorAll(".is-invalid");
+		if (errors.length > 0) {
+			formBtn.classList.toggle("form__btn_animation");
+		}
+		formBtn.addEventListener("animationend", AnimationHandler, false);
+	});
+	function AnimationHandler() {
+		formBtn.classList.remove("box_animate_2");
+	}
 });

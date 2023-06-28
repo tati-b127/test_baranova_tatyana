@@ -52,7 +52,17 @@ body {
 	margin: 0 auto;
 	background-color: #F4F5FC;
 }
-
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	background-color: transparent !important;
+ }
+ input[type="text"]:focus-visible,
+ input[type="email"]:focus-visible,
+ input[type="password"]:focus-visible {
+	 background-color: transparent;
+	}
+	
 .container {
 	display: flex;
 	padding: 60px 68px;
@@ -189,6 +199,7 @@ svg {
 	outline: none;
 	padding: 6px 1px;
 	background: transparent;
+	background-color: transparent;
 }
 
 .form__input_radio {
@@ -294,6 +305,9 @@ svg {
 		flex-direction: column-reverse;
 		grid-column: 1 / 2;
 		margin-top: 30px;
+	}
+	.form__select_max {
+		width: max-content;
 	}
 }
 

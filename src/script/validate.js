@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const callbackForm = document.getElementById("form");
-	console.log(callbackForm);
 	if (callbackForm) {
 		const validation = new JustValidate(callbackForm, {
 			errorFieldCssClass: "is-invalid",
 		});
-		console.log(validation);
 		validation
 			.addField("#first-name", [
 				{
