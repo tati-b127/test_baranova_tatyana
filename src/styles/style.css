@@ -78,7 +78,7 @@ input[type="password"]:focus-visible {
 	min-width: 137px;
 	background: #5A61ED;
 	padding: 10px;
-	background-image: url(../images/sign-up.svg);
+	background-image: url(./images/sign-up.svg);
 	background-repeat: no-repeat;
 	background-position: right 10px bottom 20px;
 }
@@ -105,7 +105,7 @@ input[type="password"]:focus-visible {
 	position: relative;
 	padding: 38px 22px 20px;
 	background-color: #fff;
-	background-image: url(../images/background.svg);
+	background-image: url(./images/background.svg);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 }
@@ -296,7 +296,7 @@ input[type="radio"]:focus {
 	width: 100%;
 	padding: 216px 43px 20px;
 	background-color: #fff;
-	background-image: url(../images/background.svg);
+	background-image: url(./images/background.svg);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	z-index: 100;
@@ -331,7 +331,7 @@ input[type="radio"]:focus {
 }
 
 .just-validate-success-field {
-	background-image: url(../images/state-ok.svg);
+	background-image: url(./images/state-ok.svg);
 	background-repeat: no-repeat;
 	background-position: right center;
 }
