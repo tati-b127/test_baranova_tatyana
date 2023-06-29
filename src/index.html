@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
 	<title>Test Baranova Tatyana</title>
 
 </head>
+
 <body>
 	<div class="container">
 		<div class="aside">
@@ -22,11 +24,11 @@
 			<form method="post" id="form" class="main__form form">
 				<label for="first-name" class="form__label">
 					First Name
-					<input type="text" name="first-name" class="form__input" id="first-name">
+					<input type="text" name="first-name" class="form__input valid" id="first-name">
 				</label>
 				<label for="last-name" class="form__label">
 					Last Name
-					<input type="text" name="last-name" class="form__input" id="last-name">
+					<input type="text" name="last-name" class="form__input valid" id="last-name">
 				</label>
 				<div class="form__label">
 					Nationality
@@ -41,7 +43,7 @@
 				</div>
 				<label for="mail" class="form__label">
 					E-mail
-					<input type="email" name="e-mail" class="form__input" id="mail">
+					<input type="email" name="e-mail" class="form__input valid" id="mail">
 				</label>
 				<div class="form__label">
 					Date of Birth
@@ -66,11 +68,12 @@
 				</div>
 				<label for="password" class="form__label">
 					Password
-					<input type="password" class="form__input form__input_password" name="password" id="password">
+					<input type="password" class="form__input form__input_password valid" name="password" id="password">
 				</label>
 				<label for="confirmpassword" class="form__label">
 					Confirm Password
-					<input type="password" class="form__input form__input_password" name="confirmpassword" id="confirmpassword">
+					<input type="password" class="form__input form__input_password valid" name="confirmpassword"
+						id="confirmpassword">
 				</label>
 				<div class="form__block-btn">
 					<p class="form__caption">
@@ -80,7 +83,18 @@
 					<button type="submit" class="form__btn">Complete Signup</button>
 				</div>
 			</form>
+			<div class="main__callback">
+				<div class="main__block-btn">
+				<h2 class="main__title">Thank You!</h2>
+				<p class="main__description">you registered!</p>
+					<p class="main__caption">
+						Have an account?
+						<a href="https://github.com/tati-b127/test_baranova_tatyana/tree/dev" class="main__login-link">Login</a>
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
+
 </html>

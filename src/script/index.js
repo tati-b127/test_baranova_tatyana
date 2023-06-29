@@ -33,14 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	// Send form
 	const formBtn = document.querySelector(".form__btn");
-	formBtn.addEventListener("click", function () {
-		const errors = document.querySelectorAll(".is-invalid");
-		if (errors.length > 0) {
-			formBtn.classList.toggle("form__btn_animation");
-		}
-		formBtn.addEventListener("animationend", AnimationHandler, false);
-	});
-	function AnimationHandler() {
-		formBtn.classList.remove("box_animate_2");
+	const form = document.querySelector(".main__form");
+	function animationHandler() {
+		formBtn.classList.remove("form__btn_animation");
 	}
+	function submitForm() {
+		const callback = document.querySelector(".main__callback");
+		const errorList = [];
+		const formInput = document.querySelectorAll(".valid");
+		let total = 0;
+		const successList = [];
+		formInput.forEach((e) => {
+			if (e.classList.contains("is-invalid")) {
+				total = errorList.push(e);
+				if (total > 0) {
+					formBtn.classList.add("form__btn_animation");
+					setTimeout(animationHandler, 300);
+				}
+			} else if (e.classList.contains("just-validate-success-field")) {
+				let total2 = successList.push(e);
+				if (total2 === formInput.length) {
+					callback.classList.add("visible");
+				}
+			}
+		});
+	}
+	form.addEventListener("submit", function () {
+		setTimeout(submitForm, 100);
+	});
 });

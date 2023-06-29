@@ -52,17 +52,19 @@ body {
 	margin: 0 auto;
 	background-color: #F4F5FC;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
 	background-color: transparent !important;
- }
- input[type="text"]:focus-visible,
- input[type="email"]:focus-visible,
- input[type="password"]:focus-visible {
-	 background-color: transparent;
-	}
-	
+}
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible {
+	background-color: transparent;
+}
+
 .container {
 	display: flex;
 	padding: 60px 68px;
@@ -202,6 +204,16 @@ svg {
 	background-color: transparent;
 }
 
+select:focus-visible {
+	border-bottom: 1px solid #5A61ED;
+}
+
+input[type="radio"]:focus {
+	border-radius: 100%;
+	border: 1px solid #5A61ED;
+	outline: 1px solid #5A61ED;
+}
+
 .form__input_radio {
 	width: auto;
 	border-color: #111;
@@ -226,7 +238,8 @@ svg {
 	border-bottom: 1px solid #5A61ED;
 }
 
-.form__caption {
+.form__caption,
+.main__caption {
 	font-family: 'Work Sans', sans-serif;
 	color: #111;
 	font-size: 14px;
@@ -236,7 +249,8 @@ svg {
 	margin-bottom: 20px;
 }
 
-.form__login-link {
+.form__login-link,
+.main__login-link {
 	font-family: 'Work Sans', sans-serif;
 	color: #5A61ED;
 	font-size: 14px;
@@ -256,12 +270,55 @@ svg {
 	border: none;
 	outline: none;
 	margin-left: auto;
+}
 
+.form__btm:hover {
+	background-color: #444abb;
+}
+
+.form__btm:focus-visible {
+	background-color: #444abb;
+	border: 1px solid #111;
+}
+
+.form__login-link:hover,
+.form__login-link:focus-visible,
+.main__login-link:hover,
+.main__login-link:focus-visible {
+	color: #444abb;
+}
+
+.main__callback {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: none;
+	width: 100%;
+	padding: 216px 43px 20px;
+	background-color: #fff;
+	background-image: url(../images/background.svg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	z-index: 100;
+}
+
+.main__caption {
+	margin-left: -43px;
+	margin-top: 140px;
+}
+
+.main__block-btn {
+	display: flex;
+	flex-direction: column;
 }
 
 .hidden {
 	visibility: hidden;
 	opacity: 0;
+}
+
+.visible {
+	display: block;
 }
 
 .is-invalid {
@@ -284,8 +341,12 @@ svg {
 		max-width: none;
 	}
 
+	.main__callback {
+		margin-left: -23px;
+	}
+
 	.container {
-		padding: 60px 30px;
+		padding: 30px 30px;
 	}
 
 	.form {
@@ -306,14 +367,19 @@ svg {
 		grid-column: 1 / 2;
 		margin-top: 30px;
 	}
+
 	.form__select_max {
 		width: max-content;
+	}
+
+	.main__caption {
+		margin-left: 0;
 	}
 }
 
 @media (max-width: 480px) {
 	.container {
-		padding: 20px;
+		padding: 0;
 	}
 
 	.aside {
